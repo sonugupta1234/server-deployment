@@ -12,7 +12,12 @@ const orderSchema=new mongoose.Schema({
         language:{type:String, require:true},
         pages:{type:Number, require:true},
         title:{type:String, require:true},
-        year:{type:Number, require:true}
+        year:{type:Number, require:true},
+        user: {
+                type: mongoose.Schema.ObjectId,
+                ref: "user",
+                required: true,
+              }
         
     
    
